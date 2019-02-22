@@ -1,18 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//Reactive Form Module
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//Firebase
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { environment } from "../environments/environment";
+import { NumberComponent } from './number/number.component';
+import { NumberListComponent } from './number-list/number-list.component';
+//Number Service from number.service.ts
+import { NumberService } from "./shared/number.service";
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NumberComponent,
+    NumberListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //Form Module
+    ReactiveFormsModule,
+    //Firebase
+  	AngularFireModule.initializeApp(environment.firebaseConfig),// we called initializeApp function to provide connection details
+   	AngularFireDatabaseModule // we will import the classes here too 
   ],
-  providers: [],
+  //Add provider NumberService
+  providers: [NumberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
