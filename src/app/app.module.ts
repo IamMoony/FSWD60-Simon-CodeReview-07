@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //Reactive Form Module
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule ,FormsModule} from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +28,8 @@ import { NumberService } from "./shared/number.service";
     ReactiveFormsModule,
     //Firebase
   	AngularFireModule.initializeApp(environment.firebaseConfig),// we called initializeApp function to provide connection details
-   	AngularFireDatabaseModule // we will import the classes here too 
+   	AngularFireDatabaseModule, // we will import the classes here too 
+    FormsModule
   ],
   //Add provider NumberService
   providers: [NumberService],

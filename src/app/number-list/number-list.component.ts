@@ -8,6 +8,8 @@ import { NumberService } from "../shared/number.service";
 })
 export class NumberListComponent implements OnInit {
 	numberArray =[];
+  showDeletedMessage : boolean
+  searchText:string = "";
   constructor(private numberService: NumberService) { }
 
   ngOnInit() {
@@ -23,4 +25,15 @@ export class NumberListComponent implements OnInit {
 
 }
 
-}
+onDelete($key){
+     if(confirm("Are you sure you want to delete this record?")){
+       this.numberService.deleteNumber($key);
+       this.showDeletedMessage = true;
+       setTimeout(()=> this.showDeletedMessage=false , 3000)
+     }
+   }
+
+   filterCondition(number){
+     return number.lastName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1 ;
+   }
+ }

@@ -32,4 +32,23 @@ export class NumberService {
 			email: number.email
 		});
 	}
+
+	populateForm(number){
+		this.form.setValue(number);
+
+	}
+
+	updateNumber(number){
+    this.numberList.update(number.$key,{
+       firstName: number.firstName,
+       lastName: number.lastName,
+       number: number.number,
+       email: number.email
+    });
+  }
+
+  deleteNumber($key: string){
+    this.numberList.remove($key);
+  }
 }
+
