@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NumberService } from "../shared/number.service";
 
 @Component({
   selector: 'app-number-list',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./number-list.component.css']
 })
 export class NumberListComponent implements OnInit {
-
-  constructor() { }
+	numberArray =[];
+  constructor(private numberService: NumberService) { }
 
   ngOnInit() {
-  }
+  	 this.numberService.getNumber().subscribe(
+                 (list) => {
+                         this.numberArray = list.map( (item) => {
+                                return {
+                                        $key : item.key,
+                                        ...item.payload.val()
+                                }
+                        })
+                 });
+
+}
 
 }

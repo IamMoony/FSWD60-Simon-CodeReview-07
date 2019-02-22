@@ -1,34 +1,38 @@
 <div class="row">
-        <div class="col-md-5">
-                <!-- We will build this form using ReactiveForm based on the property "form" inside customerservice.ts  -->
-                <form [formGroup]="this.numberService.form" (ngSubmit)="onSubmit()">
-                        <input type="hidden" formControlName="$key"><!-- this is a primary key for each record of customer and after that we can display the active form control-->
-                        <div class="form-group">
-                                <label>First Name</label>
-                                <input formControlName="firstName" class="form-control"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
+    <div class="alert alert-info" *ngIf="showSuccessMessage">
+        submitted successfully.
+    </div>
+    <div class="col-md-5">
+        <!-- We will build this form using ReactiveForm based on the property "form" inside customerservice.ts  -->
+        <form [formGroup]="this.numberService.form" (ngSubmit)="onSubmit()">
+            <input type="hidden" formControlName="$key"><!-- this is a primary key for each record of customer and after that we can display the active form control-->
+            <div class="form-group">
+                <label>First Name</label>
+                <input formControlName="firstName" class="form-control"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
 
-                        </div>
-                         <div class="form-group">
-                                <label>Last Name</label>
-                                <input formControlName="lastName" class="form-control"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input formControlName="lastName" class="form-control"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
 
-                        </div>
-                        <div class="form-group">
-                                <label>Phone Number</label>
-                                <input formControlName="number" class="form-control">
-                        </div>
-                        <div class="form-group">
-                                <label>Email</label>
-                                <input formControlName="email" class="form-control">
-                        </div>
-                       
-                        <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Add Contact"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input formControlName="number" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input formControlName="email" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
 
-                        </div>
-                </form>
-        </div>
-        <div class="col-md-7">
-                <app-number-list></app-number-list>
-        </div>
+            </div>
+        </form>
+        
+    </div>
+    <div class="col-md-7">
+        <app-number-list></app-number-list>
+    </div>
 </div>
