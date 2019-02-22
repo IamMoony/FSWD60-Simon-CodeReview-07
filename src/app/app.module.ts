@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 //Reactive Form Module
 import { ReactiveFormsModule ,FormsModule} from "@angular/forms";
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 
 //Firebase
@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     NumberListComponent,
     HeaderComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
