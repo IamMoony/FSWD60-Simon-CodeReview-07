@@ -14,12 +14,18 @@ import { NumberComponent } from './number/number.component';
 import { NumberListComponent } from './number-list/number-list.component';
 //Number Service from number.service.ts
 import { NumberService } from "./shared/number.service";
+import { HeaderComponent } from './header/header.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NumberComponent,
-    NumberListComponent
+    NumberListComponent,
+    HeaderComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -34,6 +34,6 @@ onDelete($key){
    }
 
    filterCondition(number){
-     return number.lastName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1 ;
+     return number.lastName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1 || number.firstName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1;
    }
  }
