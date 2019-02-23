@@ -13,3 +13,8 @@
 /* .heading-table {
 	text-align: center;
 } */
+
+body, html {
+	font-family: 'Roboto Slab', serif;
+	position: relative;
+}
