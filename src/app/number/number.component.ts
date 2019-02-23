@@ -9,7 +9,7 @@ import { NumberService  } from "../shared/number.service";
 })
 export class NumberComponent implements OnInit {
 
-	constructor(private numberService: NumberService) { }
+	constructor(public numberService: NumberService) { }
 	submitted: boolean;
 	formControls = this.numberService.form.controls;
 	showSuccessMessage: boolean;

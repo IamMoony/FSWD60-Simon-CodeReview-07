@@ -10,7 +10,7 @@ export class NumberListComponent implements OnInit {
 	numberArray =[];
   showDeletedMessage : boolean
   searchText:string = "";
-  constructor(private numberService: NumberService) { }
+  constructor(public numberService: NumberService) { }
 
   ngOnInit() {
   	 this.numberService.getNumber().subscribe(
