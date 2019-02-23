@@ -7,7 +7,7 @@ import { NumberComponent } from './number/number.component';
 const routes: Routes = [
 	{path: 'import', component: ImportnumbersComponent},
 	{path: 'datalist', component: DatalistComponent},
-	{path: 'landing', component: NumberComponent}
+	{path: '', component: NumberComponent}
 ];
 
 @NgModule({

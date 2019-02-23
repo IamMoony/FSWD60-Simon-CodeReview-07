@@ -1,4 +1,4 @@
-<form class="form-inline">
+<form class="form-inline form-wrapper">
         <input name="searchInput" class="form-control" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 80%;">
         <button class="btn btn-outline-primary" (click)="searchText=''">x</button>
 </form>
@@ -17,8 +17,8 @@
                         <td>{{number.number}}</td>
                         <td>{{number.email}}</td>
                         <td>
-                                <button class="btn btn-info" (click)="numberService.populateForm(number)">Edit</button>
-                                <button class="btn btn-danger" (click)="onDelete(number.$key)">Delete</button>
+                                <button class="btn btn-info" (click)="numberService.populateForm(number)"><span class="glyphicon glyphicon-cog"></span></button>
+                                <button class="btn btn-danger" (click)="onDelete(number.$key)"><span class="glyphicon glyphicon-minus"></span></button>
                         </td>
                 </tr>
         </ng-container>
