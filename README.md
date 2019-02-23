@@ -1,5 +1,8 @@
 # MyPhoneBook
 
+## Requirements
+You need to provide your own credentials for your firebase account in order to ng serve the application. File location: src/app/environments/environment.ts.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.0.
 
 ## Development server
