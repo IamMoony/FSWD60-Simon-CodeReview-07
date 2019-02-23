@@ -2,6 +2,14 @@ div {
 	border: 1px solid red;
 }
 
-.input-wrapper {
+/* .input-wrapper {
 	margin-top:  6%;
+} */
+
+body {
+	background-color: #6ed3cf;
+}
+
+.heading-table {
+	text-align: center;
 }

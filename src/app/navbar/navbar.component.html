@@ -1,8 +1,23 @@
-    <app-header></app-header>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-        <ul class="nav navbar-nav">
-            <li><a routerLink="/landing">Home</a></li>
-            <li><a routerLink="/import">Import Numbers</a></li>
-            <li><a routerLink="/datalist">Phone book</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/landing">Home</a></li>
+        <li><a routerLink="/landing">Important Numbers</a></li>
+        <li><a routerLink="/import">Import Number</a></li>
+        <li><a routerLink="/datalist">Phone Book</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
